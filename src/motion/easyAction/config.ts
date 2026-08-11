@@ -1,0 +1,1 @@
+export const easyActionMaxVisibleCol = 300; // Hintを表示させるための限界列番号

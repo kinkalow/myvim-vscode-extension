@@ -1,0 +1,52 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "esbuild",
+       // typeをshellにして、commandをnode esbuild.jsにして、argsを消しても同じことができる
+       // しかし、この場合PROFILEを読みにいくので遅くなる
+      "type": "process",
+      "command": "node",
+      "args": [
+        "esbuild.js"
+      ],
+      // ここでのgroupを設定は、launch.jsonの"preLaunchTask": "${defaultBuildTask}"から参照される
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      // "problemMatcher": {
+      //   "owner": "esbuild",
+      //   "applyTo": "allDocuments", // これがないと修正しても問題パネルにエラーが表示されたままになる
+      //   // filelocationで、problemMatcherが正規表現で切り出したファイル（以下の(.*)部分）を実際のファイルの場所に変換する
+      //   "fileLocation": [
+      //     "relative",
+      //     "${workspaceFolder}"
+      //   ],
+      //   "pattern": {
+      //     // esbuild.jsの console.error(`${file}(${line},${col}): error TS0000: ${e.text}`); を解析
+      //     // この結果を問題パネルに出力する
+      //     "regexp": "^(.*)\\((-?\\d+),(-?\\d+)\\):\\s+(error|warning)\\s+(TS\\d+):\\s+(.*)$",
+      //     "file": 1,
+      //     "line": 2,
+      //     "column": 3,
+      //     "severity": 4,
+      //     "code": 5,
+      //     "message": 6
+      //   }
+      // },
+      "presentation": {
+        "reveal": "silent", // エラー時のみターミナルを開く
+        "close": false, // ターミナルが閉じないため任意のキーを押してと出力される。しかしこれをtrueにすると前のエラープロセスを終了するかどうかの問い合わせが起きるので避けたい
+        "panel": "shared", // 毎回同じターミナルを利用
+        "clear": true // 次回実行時に前回の出力をクリア
+      }
+    },
+    {
+      "label": "esbuild-production",
+      "type": "shell",
+      "command": "npx tsc --noEmit && node esbuild.js", // noEmitでファイルを出力しないで型チェックのみ実行
+      "problemMatcher": "$tsc"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "name": "myvim",
+  "displayName": "myvim",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.120.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": [
+      {
+        "title": "myvim-motion-halfPageScroll",
+        "properties": {
+          "myvim-motion-halfPageScroll.color": {
+            "type": "string"
+          }
+        }
+      },
+      {
+        "title": "myvim-window-windowMode",
+        "properties": {
+          "myvim-window-windowMode.moveModeColor": {
+            "type": "string"
+          },
+          "myvim-window-windowMode.resizeModeColor": {
+            "type": "string"
+          }
+        }
+      }
+    ],
+    "languages": [
+      { "id": "myvim-shell-fileOperator.buffer" },
+      { "id": "myvim-memo-markdownMemo.buffer" },
+      { "id": "myvim-search-regexGrep.buffer" }
+    ],
+    "commands": [
+      { "command": "myvim-commands-substitution.substituteUnderCursor" },
+      { "command": "myvim-diff-diff.action" },
+      { "command": "myvim-file-fileOpen.open" },
+      { "command": "myvim-file-workspaceFiles.open" },
+      { "command": "myvim-editor-fold.foldSelection" },
+      { "command": "myvim-memo-markdownMemo.run" },
+      { "command": "myvim-modes-visualMode.enterVisualMode" },
+      { "command": "myvim-modes-onInsertLeave.onInsertLeave" },
+      { "command": "myvim-motion-easyAction-main.easyAction" },
+      { "command": "myvim-motion-halfPageScroll.enterHalfPageScroll" },
+      { "command": "myvim-motion-halfPageScroll.exit" },
+      { "command": "myvim-motion-halfPageScroll.down" },
+      { "command": "myvim-motion-halfPageScroll.up" },
+      { "command": "myvim-motion-moveToNonWhitespace.down" },
+      { "command": "myvim-motion-moveToNonWhitespace.up" },
+      { "command": "myvim-operations-align.startAlignMode" },
+      { "command": "myvim-operations-applyOperator.applyOperator" },
+      { "command": "myvim-operations-argumentSwap.interactiveArgumentSwap" },
+      { "command": "myvim-operations-cursorDeletion.deleteBackWord" },
+      { "command": "myvim-operations-comment.toggleCommentBySelection" },
+      { "command": "myvim-operations-comment.toggleCommentPerLine" },
+      { "command": "myvim-operations-cursorDeletion.deleteForwardWord" },
+      { "command": "myvim-operations-rangeSwap.saveRange" },
+      { "command": "myvim-operations-rangeSwap.swapRange" },
+      { "command": "myvim-operations-rangeSwap.saveRangeVisual" },
+      { "command": "myvim-operations-rangeSwap.swapRangeVisual" },
+      { "command": "myvim-operations-selectedTextMove.move" },
+      { "command": "myvim-operations-surround.addLineSurround" },
+      { "command": "myvim-operations-surround.addSurroundToVisualSelection" },
+      { "command": "myvim-operations-surround.deleteSpecificSurround" },
+      { "command": "myvim-operations-surround.deleteSurround" },
+      { "command": "myvim-operations-surround.deleteTagSurround" },
+      { "command": "myvim-operations-surround.replaceSpecificSurround" },
+      { "command": "myvim-operations-surround.replaceSurround" },
+      { "command": "myvim-operations-yankStock.pasteFromYankStock" },
+      { "command": "myvim-operations-yankStock.replaceWithYankStock" },
+      { "command": "myvim-repeat-executeOriginalRepeat.executeOriginalRepeat" },
+      { "command": "myvim-search-cursorWordHighlight.changeSearchPattern" },
+      { "command": "myvim-search-cursorWordHighlight.jumpToNextMatch" },
+      { "command": "myvim-search-cursorWordHighlight.jumpToPrevMatch" },
+      { "command": "myvim-search-cursorWordHighlight.toggleHighlightAll" },
+      { "command": "myvim-search-cursorWordHighlight.toggleHighlightCurrent" },
+      { "command": "myvim-search-insertSearchMatch.insertSearchMatch" },
+      { "command": "myvim-search-regexGrep.regexGrep" },
+      { "command": "myvim-search-repeatPatternHighlight.highlightPattern" },
+      { "command": "myvim-search-repeatPatternHighlight.highlightRepeatPattern" },
+      { "command": "myvim-search-slash.slash" },
+      { "command": "myvim-search-visualSelectionSearch.visualSelectionSearch" },
+      { "command": "myvim-shell-commands.run" },
+      { "command": "myvim-shell-currentPathOperator.run" },
+      { "command": "myvim-shell-find.find" },
+      { "command": "myvim-shell-grep.grep" },
+      { "command": "myvim-shell-quickRun.run" },
+      { "command": "myvim-shell-quickRun.quickPick" },
+      { "command": "myvim-shell-quickRun.runCodeFence" },
+      { "command": "myvim-ui-parameterHints.closeParameterHintsThenRemap" },
+      { "command": "myvim-ui-suggestWidget.closeSuggestWidgetThenRemap" },
+      { "command": "myvim-utils-repeat.repeatLastCommand" },
+      { "command": "myvim-utils-ui-FileViewerOperation.run" },
+      { "command": "myvim-utils-ui-webSearch.search" },
+      { "command": "myvim-window-windowMode.enterWindowMode" },
+      { "command": "myvim-window-windowMode.exit" },
+      { "command": "myvim-window-windowMode.switch" },
+      { "command": "myvim-window-windowMode.left" },
+      { "command": "myvim-window-windowMode.down" },
+      { "command": "myvim-window-windowMode.up" },
+      { "command": "myvim-window-windowMode.right" },
+      { "command": "myvim-window-windowMode.nextTab" },
+      { "command": "myvim-window-windowMode.prevTab" },
+      { "command": "myvim.runProductionExtension" }
+    ]
+  },
+  "scripts": {
+    "compile": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "typecheck": "tsc --noEmit",
+    "vscode:prepublish": "npm run typecheck && node esbuild.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.120.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "esbuild": "^0.28.0",
+    "eslint": "^9.39.3",
+    "typescript-eslint": "^8.56.1"
+  },
+  "dependencies": {
+    "typescript": "^5.9.3"
+  }
+}

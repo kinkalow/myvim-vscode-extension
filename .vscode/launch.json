@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/out/**/*.js"
+      ],
+      // launch.jsonの開始前にtasks.jsonを実行する
+      // "${defaultBuildTask}"は、tasks.json の group.kind が "build" で、isDefault が true のタスクを実行する
+      "preLaunchTask": "${defaultBuildTask}"
+    },
+    {
+      "name": "Production",
+      "type": "extensionHost",
+      "request": "launch",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/out/**/*.js"
+      ],
+      "preLaunchTask": "esbuild-production" // tasks.jsonのlabelがesbuild-productionが実行される
+    }
+  ]
+}
