@@ -4,7 +4,7 @@
 
 ## デモ
 
-<a href="https://boaryzmqgukwphzrdxte.supabase.co/storage/v1/object/public/video/VSCodeExtensions.mp4">
+<a href="https://youtu.be/KnQM5IjrE8o">
   <img src="./images/thumbnail.png" width="300" alt="サンプル動画を再生">
 </a>
 
